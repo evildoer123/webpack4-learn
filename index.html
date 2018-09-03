@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./dist/index.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .video1{
+            width: 300px;
+            height: 200px;
+        }
+        .btn2{
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        .btn1{
+            position: absolute;
+            top: 50px;
+            left:50%;
+        }
+    </style>
+</head>
+<body>
+<div class="btn2">
+<video class="video1" id="video1" width="420">
+    <source src="https://pic.ibaotu.com/00/62/93/27c888piCmQF.mp4" type="video/mp4" />
+</video>
+<button class="btn btn-success btn1">点击</button>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var myVideo=document.getElementById("video1");
+  $('.btn1').on('click',function () {
+      myVideo.play();
+  })
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+    function makeBig()
+    {
+        myVideo.width=560;
+    }
+
+    function makeSmall()
+    {
+        myVideo.width=320;
+    }
+
+    function makeNormal()
+    {
+        myVideo.width=420;
+    }
+</script>
+</body>
+</html>
